@@ -17,6 +17,12 @@
     />
 
     <title>Hello, world!</title>
+    <style>
+      #loading,
+      #results {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
@@ -55,16 +61,17 @@
                 <div class="form-group">
                   <input
                     type="submit"
-                    value="Calcultate"
+                    value="Calculate"
                     class="btn btn-dark btn-block"
+                    id="submit"
                   />
                 </div>
               </div>
             </form>
-            <!-- Loader Here -->
-            <!-- <div id="loading">
+            <!-- Loader -->
+            <div id="loading">
               <img src="img/loading.gif" alt="" />
-            </div> -->
+            </div>
 
             <!-- Results -->
             <div id="results" class="pt-4">
