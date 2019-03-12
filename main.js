@@ -5,7 +5,7 @@ document.getElementById("loan-form").addEventListener("submit", function(e) {
   // Show loader
   document.getElementById("loading").style.display = "block";
 
-  setTimeout(calculateResults, 2000);
+  setTimeout(calculateResults, 300);
 
   e.preventDefault();
 });
@@ -41,7 +41,7 @@ function calculateResults() {
     // Hide Loader
     document.getElementById("loading").style.display = "none";
   } else {
-    showError("Please check your numbers");
+    showError("You did not enter all fields. Please check your inputs!");
   }
 }
 
@@ -76,3 +76,10 @@ function showError(error) {
 function clearError() {
   document.querySelector(".alert").remove();
 }
+
+// Changes Loan Amount input to decimal format
+// new Intl.NumberFormat("en-CA", { style: "decimal" }).NumberFormat(amount);
+
+document.getElementById("amount").addEventListener("keypress", function() {
+  new Intl.NumberFormat("en-CA", { style: "decimal" });
+});
