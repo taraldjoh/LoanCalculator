@@ -76,10 +76,3 @@ function showError(error) {
 function clearError() {
   document.querySelector(".alert").remove();
 }
-
-// Changes Loan Amount input to decimal format
-// new Intl.NumberFormat("en-CA", { style: "decimal" }).NumberFormat(amount);
-
-document.getElementById("amount").addEventListener("keypress", function() {
-  new Intl.NumberFormat("en-CA", { style: "decimal" });
-});
