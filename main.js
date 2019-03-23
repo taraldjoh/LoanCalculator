@@ -69,7 +69,7 @@ function showError(error) {
   card.insertBefore(errorDiv, heading);
 
   // Clear Error After 2,5 Seconds
-  setTimeout(clearError, 2500);
+  setTimeout(clearError, 1500);
 }
 
 //Clear error
@@ -91,17 +91,26 @@ document.getElementById("amount").addEventListener("input", function() {
 
 // Validate Amount Input Form
 document.getElementById("amount").addEventListener("input", function() {
-  if (isNaN("amount")) {
+  if (amount.value) {
+    // Checks if input value is number or not
+    Number.isNaN();
+    return;
+  } else {
+    // Disables the input field
     amount.setAttribute("Disabled", true);
+
+    // Displays Error Message
     showError("Please Enter A Number!");
 
-    setTimeout(amount.setAttribute("Disabled", true), 2500);
+    // Removes the disable input
+    setTimeout(clearDisable, 1500);
   }
 });
 
-function disableInput() {
-  // Disables Input Field And Displays Error Message
-  if (isNaN === true) {
-  } else {
-  }
+// Clear Disabled Input And Wipe Text
+function clearDisable() {
+  amount.removeAttribute("Disabled");
+
+  // Clears Field
+  amount.value = "";
 }
