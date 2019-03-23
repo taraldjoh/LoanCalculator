@@ -77,18 +77,6 @@ function clearError() {
   document.querySelector(".alert").remove();
 }
 
-// Format input text to decimal
-document.getElementById("amount").addEventListener("input", function() {
-  // document.getElementById("amount").value = new Intl.NumberFormat("en-CA", {
-  //   style: "decimal"
-  // }).format(
-  //   document
-  //     .getElementById("amount")
-  //     .value.match(/\d+/g)
-  //     .join("")
-  // );
-});
-
 // Validate Amount Input Form
 document.getElementById("amount").addEventListener("input", function() {
   if (amount.value) {
